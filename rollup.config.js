@@ -7,7 +7,7 @@ const NODE_ENV = process.env.NODE_ENV;
 const fileName = NODE_ENV === "production" ? "./lib/prod.js" : "./lib/dev.js";
 
 export default {
-  input: "./src/HelloWorld.js",
+  input: "./src/index.js",
   output: {
     file: fileName,
     format: "cjs"
@@ -22,5 +22,5 @@ export default {
     resolve(),
     commonjs()
   ],
-  external: ["react"]
+  external: ["react", "react-intl"]
 };
