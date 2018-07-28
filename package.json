@@ -1,0 +1,50 @@
+{
+  "name": "react-intl-provider",
+  "version": "0.0.1",
+  "description": "Wrapper around react-intl provider that allows you to change language easily.",
+  "scripts": {
+    "prepublishOnly": "npm run release",
+    "release": "npm run build:dev && npm run build:prod",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c",
+    "dev": "npm run build:dev -- --watch",
+    "lint": "eslint ."
+  },
+  "main": "index.js",
+  "files": [
+    "lib",
+    "dev.js",
+    "prod.js"
+  ],
+  "repository": "git+https://github.com/Tomekmularczyk/react-intl-context-provider.git",
+  "keywords": [
+    "react-intl",
+    "react",
+    "context",
+    "provider",
+    "language"
+  ],
+  "author": "Tomasz Mularczyk",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.13.7",
+    "react": "^16.3.2",
+    "rollup": "^0.63.4",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-replace": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": ">= 16.3.x"
+  }
+}
